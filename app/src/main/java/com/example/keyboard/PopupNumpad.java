@@ -7,33 +7,30 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.inputmethod.EditorInfo;
 import android.view.inputmethod.InputConnection;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.PopupWindow;
 
-public class PopupKeyboard {
+public class PopupNumpad {
 
     View popupView;
     android.widget.PopupWindow popupWindow;
     public boolean isShow = false;
     private final Context context;
-    Button closeButton;
 
 
-    public PopupKeyboard(Context context) {
+    public PopupNumpad(Context context) {
         this.context = context;
     }
 
     public void showPopup(EditText editText) {
         isShow = true;
         LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        popupView = inflater.inflate(R.layout.popup_keyboard, null);
-        int width = LinearLayout.LayoutParams.MATCH_PARENT;
+        popupView = inflater.inflate(R.layout.popup_numpad, null);
+        int width = LinearLayout.LayoutParams.WRAP_CONTENT;
         int height = LinearLayout.LayoutParams.WRAP_CONTENT;
 
-        Keyboard keyboard = (Keyboard) popupView.findViewById(R.id.keyboard);
-        Button closeButton = (Button) popupView.findViewById(R.id.button_close);
+        Numpad keyboard = (Numpad) popupView.findViewById(R.id.keyboard);
         InputConnection ic = editText.onCreateInputConnection(new EditorInfo());
         keyboard.setInputConnection(ic);
         editText.setRawInputType(InputType.TYPE_CLASS_TEXT);
@@ -46,12 +43,6 @@ public class PopupKeyboard {
             @Override
             public void onDismiss() {
                 isShow = false;
-            }
-        });
-        closeButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                hidePopup();
             }
         });
     }

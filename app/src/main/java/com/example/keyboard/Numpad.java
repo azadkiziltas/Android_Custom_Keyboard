@@ -11,18 +11,18 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 
-public class MyKeyboard extends LinearLayout implements View.OnClickListener {
+public class Numpad extends LinearLayout implements View.OnClickListener {
 
     // constructors
-    public MyKeyboard(Context context) {
+    public Numpad(Context context) {
         this(context, null, 0);
     }
 
-    public MyKeyboard(Context context, AttributeSet attrs) {
+    public Numpad(Context context, AttributeSet attrs) {
         this(context, attrs, 0);
     }
 
-    public MyKeyboard(Context context, AttributeSet attrs, int defStyleAttr) {
+    public Numpad(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         init(context, attrs);
     }
@@ -51,7 +51,7 @@ public class MyKeyboard extends LinearLayout implements View.OnClickListener {
     private void init(Context context, AttributeSet attrs) {
 
         // initialize buttons
-        LayoutInflater.from(context).inflate(R.layout.keyboard, this, true);
+        LayoutInflater.from(context).inflate(R.layout.numpad, this, true);
         mButton1 = (Button) findViewById(R.id.button_1);
         mButton2 = (Button) findViewById(R.id.button_2);
         mButton3 = (Button) findViewById(R.id.button_3);

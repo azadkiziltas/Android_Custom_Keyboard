@@ -4,10 +4,23 @@
     android:layout_height="wrap_content">
 
 
-    <com.example.keyboard.MyKeyboard
+    <com.example.keyboard.Keyboard
         android:id="@+id/keyboard"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-/>
+        android:orientation="vertical"/>
+
+    <Button
+        android:id="@+id/button_close"
+        android:layout_width="145dp"
+        android:layout_height="70dp"
+        android:background="@drawable/btn_hover_stop"
+        android:layout_marginLeft="695dp"
+        android:layout_marginTop="260dp"
+        android:text="Kapat"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="30dp"/>
+
+
 </RelativeLayout>

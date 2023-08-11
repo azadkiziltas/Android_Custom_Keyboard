@@ -8,11 +8,20 @@
 
     <EditText
         android:id="@+id/editText"
+        android:layout_centerHorizontal="true"
         android:layout_width="400dp"
         android:layout_height="100dp"
         android:textAlignment="center"
-        android:layout_centerHorizontal="true"
         android:layout_marginTop="100dp"
+        />
+    <EditText
+        android:id="@+id/editText2"
+        android:layout_width="400dp"
+        android:layout_below="@+id/editText"
+        android:layout_height="100dp"
+        android:textAlignment="center"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
         />
 
 </RelativeLayout>

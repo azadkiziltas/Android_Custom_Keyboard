@@ -42,7 +42,7 @@ This project is not production-grade but rather a simple prototype that showcase
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/azadkiziltas/Android_Custom_Keyboard.git
+   git clone https://github.com/azadkiziltas/AndroidCustomKeyboardJava.git
    ```
 2. Import the project into Android Studio.
 3. Build and run the project on a tablet emulator or physical device.
